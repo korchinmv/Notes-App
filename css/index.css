@@ -1,0 +1,109 @@
+.body {
+	background-color: #eeebbed2;
+	font-family: 'Lobster', cursive;
+	font-size: 22px;
+	height: 100vh;
+	max-height: 100%;
+	position: relative;
+}
+
+.body::after {
+	content: "";
+	width: 1000px;
+	height: 650px;
+	position: absolute;
+	bottom: 100px;
+	right: 0;
+	background-image: url(../img/flowers.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: -1;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;
+	width: 100%;
+}
+
+.title {
+	font-size: 50px;
+	text-align: center;
+	margin: 50px 0 50px 0;
+}
+
+.buttons-action {
+	display: flex;
+	justify-content: center;
+	margin: 0 auto 50px auto;
+}
+
+.notes__card-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 15px;
+}
+
+.notes {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	row-gap: 30px;
+	column-gap: 30px;
+}
+
+.notes__card {
+	background-color: rgb(253, 253, 252);
+	box-shadow: 2px 2px 5px 2px #cacaca;
+	border-radius: 10px;
+	padding: 16px;
+	min-height: 300px;
+	width: 100%;
+	transition: box-shadow ease .3s;
+}
+
+.notes__card:not(:last-child) {
+	margin-right: 15px;
+
+}
+
+.notes__card:hover {
+	box-shadow: 2px 2px 10px 2px #9765e7;
+}
+
+.btn-action {
+	background-color: #fff;
+	border: 2px solid transparent;
+	border-radius: 15px;
+	cursor: pointer;
+	display: inline-block;
+	font-weight: 700;
+	padding: 15px 30px;
+	transition: background-color ease .3s, color ease .3s, border-color ease .3s;
+}
+
+.btn-action:hover {
+	background-color: #08dfee;
+	border-color: #9765e7;
+	color: #9765e7;
+}
+
+.btn-action:not(:last-child) {
+	margin-right: 15px;
+}
+
+.button {
+	cursor: pointer;
+	width: 35px;
+	height: 35px;
+	padding: 4px;
+}
+
+.button:not(:last-child) {
+	margin-right: 5px;
+}
+
+.hidden {
+	display: none;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Приложение "Заметки"</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" href="./css/index.css">
+	<script src="./js/index.js" type="module"></script>
+</head>
+
+<body class="body">
+	<div class="container">
+		<h1 class="title">Мои заметки</h1>
+
+		<div class="buttons-action">
+			<button class="btn-action btn-action_add" type="button">Добавить заметку</button>
+
+			<button class="btn-action btn-action_delete" type="button">Удалить заметки</button>
+		</div>
+
+
+		<ul class="notes">
+
+		</ul>
+
+		<template class="template-note">
+			<li class="notes__card">
+				<div class="notes__card-header">
+					<h2 class="notes__title"></h2>
+
+					<div class="notes__actions">
+						<button class="button button-edit" type="button">
+							<img class="icon" src="./img/pen.svg" alt="Изменить">
+						</button>
+
+						<button class="button button-delete" type="button">
+							<img class="icon" src="./img/del.svg" alt="Удалить">
+						</button>
+					</div>
+				</div>
+
+				<p class="notes__text"></p>
+			</li>
+		</template>
+	</div>
+</body>
+
+</html>
