@@ -32,7 +32,8 @@
 		<template class="template-note">
 			<li class="notes__card">
 				<div class="notes__card-header">
-					<h2 class="notes__title"></h2>
+					<p class="notes__title"></p>
+					<input class="notes__title-input hidden" type="text" placeholder="Заголовок"></input>
 
 					<div class="notes__actions">
 						<button class="button button-edit" type="button">
@@ -46,6 +47,8 @@
 				</div>
 
 				<p class="notes__text"></p>
+				<textarea class="notes__textarea hidden" name="text" id="text" cols="30" rows="10"
+					placeholder="Ваш текст"></textarea>
 			</li>
 		</template>
 	</div>

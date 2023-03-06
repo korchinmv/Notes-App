@@ -4,11 +4,16 @@ import { config } from "./variables.js";
 import { Note } from "./components/Note.js";
 import { Section } from "./components/Section.js";
 
-const newNote = new Note(config.templateNote, config.noteSelector);
+const newNote = ({ templateNote, noteSelector }) => {
+  const note = new Note(templateNote, noteSelector);
+  const noteElement = note.generateNote();
+  return noteElement;
+};
+
 const noteElementToPage = new Section(config.containerNotes);
 
 buttonAddNote.addEventListener("click", () => {
-  noteElementToPage.addItem(newNote.generateNote());
+  noteElementToPage.addItem(newNote(config));
 });
 
 buttonDeleteAllNotes.addEventListener("click", () => {
